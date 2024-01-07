@@ -16,3 +16,18 @@ const value = numbers.forEach((item, index ,arr) => {
 
 })
 //some
+const nums2 = [1, 2, 3, -4, 5];
+const hasNegative = nums2.some(num => num < 0);
+console.log(hasNegative);
+//every
+const nums3 = [1, 2, 3, 4, 5, 6];
+const allPositive = numbers.every(num => num > 0);
+console.log(allPositive);
+
+const sortedNumbers = [1, 2, 3, 4, 5];
+const isSortedAsending = sortedNumbers.every((num, index, arr) => {
+    if (index === 0) {
+        return true;
+    }
+    return num >= arr[index - 1];
+})
