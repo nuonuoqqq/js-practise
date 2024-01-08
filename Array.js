@@ -31,3 +31,9 @@ const isSortedAsending = sortedNumbers.every((num, index, arr) => {
     }
     return num >= arr[index - 1];
 })
+
+function unique (arr3) {
+    return Array.from(new Set(arr3))
+}
+var arr3 = [1, 1, 'true', 'true', true, true, 14, 14, false, false, undefined, undefined]
+console.log(unique(arr3))
