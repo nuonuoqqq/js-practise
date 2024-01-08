@@ -37,3 +37,17 @@ function unique (arr3) {
 }
 var arr3 = [1, 1, 'true', 'true', true, true, 14, 14, false, false, undefined, undefined]
 console.log(unique(arr3))
+
+function unique(arr4) {
+    for(var i=0; i<arr4.length;i++){
+        for(var j = i+1;j<arr4.length;j++){
+            if(arr4[i] == arr4[j]){
+                arr4.splice(j,1);
+                j--;
+            }
+        }
+    }
+    return arr4;
+}
+var arr4 = [1,1,'true','true',true,true,15,15,false,false, undefined,undefined, null,null, NaN, NaN,'NaN', 0, 0, 'a', 'a',{},{}];
+    console.log(unique(arr4))
